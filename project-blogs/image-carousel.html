@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Web Developer Blog of an image carousel implementation. I am learning web development and will update this website as I learn. Take a look at my current portfolio and blogs.">
+    <meta name="keywords" content="portfolio, HTML, CSS, Javascript, blog, developer, web developer, carousel, image carousel">
+    <meta name="author" content="Terry Roach">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terry Roach - Image Carousel</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css" integrity="sha256-46qynGAkLSFpVbEBog43gvNhfrOj+BmwXdxFgVK/Kvc=" crossorigin="anonymous" />
+</head>
+<body>
+    <header class="container" id="home">
+        <div class="header-top">
+            <h1 class="header-name"><a href="../index.html" class="home-link">terryroach.co.uk</a></h1>
+        </div>
+        <div class="blog-nav-list">
+            <a href="../blog.html" class="blog-nav-link">All</a>
+            <a href="../html-blogs/html-blogs.html" class="blog-nav-link">HTML</a>
+            <a href="../css-blogs/css-blogs.html" class="blog-nav-link">CSS</a>
+            <a href="../js-blogs/js-blogs.html" class="blog-nav-link">Javascript</a>
+            <a href="project-blogs.html" class="blog-nav-link">Projects</a>
+        </div>
+    </header>
+    <main>
+        <section class="container">
+            <div class="blog-container">
+                <div class="blog-container-header blog-container-header-project">
+                    <p class="blog-container-header-title">Image Carousel</p>
+                    <p class="blog-container-header-desc">Wesbite carousels, also know as 'sliders' are popular in website design. They allow multiple slides to be cycled through 1 at a time, either automatically, user controlled or both</p>
+                    <p class="blog-container-header-date">14/03/2021</p>
+                </div>
+                
+                <img src="../images/carousel.jpg" alt="an image of a bridge in the disatance from an image carousel" class="blog-container-image">
+
+                <p class="blog-intro">Wesbite carousels, also know as 'sliders' are popular in website design. They allow multiple slides to be cycled through 1 at a time, either automatically, user controlled or both. The slides can contain images, CTAs or just about anything you choose. You will see them ons sites such as news agencies, each slide relating to a different article, see them on estate agent websites so you can cycle through the pictures of the property you are viewing, a business site highlighting different departments within their organisation on each slide, perhaps when looking for hotels, they can be extremely useful.</p>
+                <p class="blog-intro">In this example I set up a carousel with 4 images taken on a couple I done locally. The carousel is manual so there is notiming function on it to move between the images. The images can be navigated using a next or previous button which are located on the images to the left and right, or by using the current slide indicator nav buttons below the image which allows you to go to an image of your choice..</p>
+
+                <p class="blog-para">1. Add the base HTML structure made up of a heading, a parent div, 4 divs to hold the images, a div for the current slide indicator which has 4 buttons and another div which has the previous and next button. Aria-labels are added to the buttons for accessibility.</p>
+                <p class="blog-para">2. Add the styling to the carousel. This included setting a max-width on the parent div and setting it to position: relative, the images were set to be 100% width of the parent div and also match the max-width. All the images were set to display: none and the first image was given an extra class to make it visible. The current slide indcator div was given a display of flex and the 4 buttons in it were styled into circles, the first one again given an extra class which is used to display the active image (the image currently being shown), hover and focus states were also added to the current slide indicator buttons. The previous and next buttons were given position: relative so they could be placed on top od the active image. The div containing the buttons was given a display of flex, justify-content of space-between and width of 100%. Top, margin and tranform on translateY was then used on the buttons to bring them to their final postions.</p>
+                <p class="blog-para">3. In the Javascript file all the images were stored in a const variable called slides. A let variable of slidePostion was defined and initialised to 0. A const variable of totalSlide was set to be the length of the slides variable. The 2 buttons had click eventListeners attached and the secons parameters were functions to either move to previous slide or move to the next slide.</p>
+                <p class="blog-para">4. Focus was now on the functions for the 2 buttons and changing the images. The function for move to next slide initially hides all the images by removing the class the displays the image and adding the class to hide the image to all of the images. It then looks at the current slide position to see if it is equal to the totalSlide - 1, if it is then slidePosition is set to 0, else slidePosition is increamented by 1. slidePosition now becomes the current slide and this image has the hidden removed from it and the visibile class added to it. The move to previous slide function works in much the same but it's conditional looks to see if slidePosition is equal to 0, if it is then slidePosition is set to the length of the slides variable - 1, else it is deceremented by 1.</p>
+                <p class="blog-para">5. Next up was to give functionality to the current slide indicator div buttons so they could used to navigate to images in any order. A const variable of dotNavIndicators was set up to grab all the 4 buttons in the div. A const variable carouselNav was set up to grab the div and a const variable of dots was an array of the buttons in the nav. An eventListener was added to carouselNav, this function initially hides all the images and removes the active class from the current slide indicator div buttons. This function to remove the active class from the current slide indicator div buttons was also added to the event listeners for the next and previous buttons. The next step of the carouselNav event listener is to set const variable called targetDot to get the 'closest' dot by where the click event occurs. A const variable called dotIndex is defined and assinged the value of targetDot using the findIndex() method. The slidePosition is then set as the dotIndex and dotIndex is also used to remove the hidden class and add the visible class to the image at that position, the dotIndex is again used to ac the active class to the current slide indicator nav button.</p>
+                <p class="blog-para">6. Finally an animation was added to visible class to allow for smooth transitions between images, it is a simple animation which goes from 0% at opacity:0 to 100% at opacity: 1 in 0.5 seconds.</p>
+                <p>You can visit the page for the search bar project <a href="https://terryroach-dev.github.io/carousel/" target="_blank" class="ext-proj-link">here</a></p>
+            </div>
+        </section>
+        
+    </main>
+    <footer>
+        <div class="social">
+            <ul class="social-list">
+                <li class="social-list-item"><a href="https://twitter.com/frontend_terry" target="_blank" class="social-link"><i class="fab fa-twitter"></i></a></li>
+                <li class="social-list-item"><a href="https://www.linkedin.com/in/terence-roach-a10b90b0" target="_blank" class="social-link"><i class="fab fa-linkedin"></i></a></li>
+                <li class="social-list-item"><a href="https://github.com/terryroach-dev" target="_blank" class="social-link"><i class="fab fa-github-square"></i></a></li>
+            </ul>
+        </div>
+        <p>&copy;2021 Terry Roach</p>
+    </footer>
+</body>
+</html>

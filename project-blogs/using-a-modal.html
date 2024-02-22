@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta charset="UTF-8">
+    <meta name="description" content="Web Developer Blog of a Modal implementation. I am learning web development and will update this website as I learn. Take a look at my current portfolio and blogs.">
+    <meta name="keywords" content="portfolio, HTML, CSS, Javascript, blog, developer, web developer">
+    <meta name="author" content="Terry Roach">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terry Roach - Using a Modal Blog</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css" integrity="sha256-46qynGAkLSFpVbEBog43gvNhfrOj+BmwXdxFgVK/Kvc=" crossorigin="anonymous" />
+</head>
+<body>
+    <header class="container" id="home">
+        <div class="header-top">
+            <h1 class="header-name"><a href="../index.html" class="home-link">terryroach.co.uk</a></h1>
+        </div>
+        <div class="blog-nav-list">
+            <a href="../blog.html" class="blog-nav-link">All</a>
+            <a href="../html-blogs/html-blogs.html" class="blog-nav-link">HTML</a>
+            <a href="../css-blogs/css-blogs.html" class="blog-nav-link">CSS</a>
+            <a href="../js-blogs/js-blogs.html" class="blog-nav-link">Javascript</a>
+            <a href="project-blogs.html" class="blog-nav-link">Projects</a>
+        </div>
+    </header>
+    <main>
+        <section class="container">
+            <div class="blog-container">
+                <div class="blog-container-header blog-container-header-project">
+                    <p class="blog-container-header-title">Using a Modal</p>
+                    <p class="blog-container-header-desc">A modal is a dialog box/pop up window that is displayed on top of the current page</p>
+                    <p class="blog-container-header-date">04/03/2021</p>
+                </div>
+                
+                <img src="../images/modal_big_screen.png" alt="a modal with information displayed" class="blog-container-image">
+
+                <p class="blog-intro">A modal is a dialog box/pop up window that is displayed on top of the current page. The user must engage with the modal in order to close and return to the main content. Modals can be used to direct a users attention to some required action or some important information. You will often see them used at the bottom of pages prompting the user to accpet cookies.</p>
+                <p class="blog-intro">In this example I set up a full page modal which when opened dislpays a little bit of information about me. To create the modal required HTML to set the elements structure and add the content required, CSS to add the styling and Javascript to give the modal it's functionality.</p>
+
+                <p class="blog-para">1. Set up the 3 files to be used, index.html, styles.css and modal.js.</p>
+                <p class="blog-para">2. Set up the basic html elements such as the html, head, title and body tags. Add the css file and javascript links to the html file.</p>
+                <p class="blog-para">3. Add the html element Skeleton. This is a div with an id of 'overlay', inside of that is another div with an id of 'modal'. These 2 divs will be where the modal is placed. Another div is added with a class of 'main-content', this will be where the main content is the page will be placed.</p>
+                <p class="blog-para">4. Complete the html file by adding the content which includes a twitter icon from Font Awesome and 2 buttons which will be used to open and close the modal</p>
+                <p class="blog-para">5. Added some of the styling to CSS file, focussing on mobile first. The styling included general body properties such as margin and padding, font properties, links and the buttons. I went back to the html file and added a link to my twitter acc and google fonts.</p>
+                <p class="blog-para">6. It is time to hook up the buttons in Javascript set the functionality. The javascript will grab the 2 buttons and the 'overlay' div. The 2 buttons are given an event listener which when clicked will either open or close the modal by setting the 'display' property of the 'overlay' div to 'block' or 'none'.</p>
+                <p class="blog-para">7. The final styling is added, this includes setting the 'overlay' div to 'display: none' so the modal is not viewable when the page first loads. It also includes the media queries for bigger screens.</p>
+                <p>You can visit the page for the modal project <a href="https://terryroach-dev.github.io/modal/" target="_blank" class="ext-proj-link">here</a></p>
+            </div>
+        </section>
+        
+    </main>
+    <footer>
+        <div class="social">
+            <ul class="social-list">
+                <li class="social-list-item"><a href="https://twitter.com/frontend_terry" target="_blank" class="social-link"><i class="fab fa-twitter"></i></a></li>
+                <li class="social-list-item"><a href="https://www.linkedin.com/in/terence-roach-a10b90b0" target="_blank" class="social-link"><i class="fab fa-linkedin"></i></a></li>
+                <li class="social-list-item"><a href="https://github.com/terryroach-dev" target="_blank" class="social-link"><i class="fab fa-github-square"></i></a></li>
+            </ul>
+        </div>
+        <p>&copy;2021 Terry Roach</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="description"
+      content="Web Developer Portfolio. I am learning web development and will update this website as I learn. Take a look at my current portfolio and blogs."
+    />
+    <meta
+      name="keywords"
+      content="portfolio, HTML, CSS, Javascript, blog, developer, web developer"
+    />
+    <meta name="author" content="Terry Roach" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Terry Roach - Web Developer</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css"
+      integrity="sha256-46qynGAkLSFpVbEBog43gvNhfrOj+BmwXdxFgVK/Kvc="
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <header class="container" id="home">
+      <div class="header-top">
+        <h1 class="header-name">terryroach.co.uk</h1>
+        <button class="nav-toggle" aria-label="toggle navigation">
+          <span class="hamburger"></span>
+        </button>
+      </div>
+      <div class="header-about">
+        <img class="my-pic" src="images/pic1.jpg" alt="a smiling terry roach" />
+        <p class="intro">Hi, my name is</p>
+        <p class="name">Terry Roach</p>
+        <p></p>
+        <p class="role">front-end developer</p>
+      </div>
+    </header>
+    <nav>
+      <ul class="nav-list">
+        <li class="nav-item"><a href="#home" class="nav-link">Home</a></li>
+        <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
+        <li class="nav-item">
+          <a href="#what-i-do" class="nav-link">What I do</a>
+        </li>
+        <li class="nav-item">
+          <a href="#portfolio" class="nav-link">Portfolio</a>
+        </li>
+        <li class="nav-item"><a href="#blog" class="nav-link">Blog</a></li>
+        <!-- <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li> -->
+      </ul>
+
+      <main>
+        <section class="about" id="about">
+          <div class="about-div container">
+            <h2 class="about-title">About</h2>
+            <p class="about-content">
+              I live in Halton and I am on a journey to become a front-end
+              Developer. I am self funding my learning through scrimba.com and
+              use various other tutorials from YouTube and the web. This is my
+              Portfolio site which will be used to showcase what I learned so
+              far
+            </p>
+          </div>
+        </section>
+        <section class="what-i-do" id="what-i-do">
+          <div class="container">
+            <h2 class="what-i-do-title">What I do</h2>
+            <div class="what-i-do-outer">
+              <div class="what-i-do-skill-div">
+                <h3 class="what-i-do-skill-div-title">HTML</h3>
+                <p class="what-i-do-skill-div-desc">
+                  Hyper Text Markup Language. The standard language for creating
+                  websites
+                </p>
+              </div>
+              <div class="what-i-do-skill-div">
+                <h3 class="what-i-do-skill-div-title">CSS</h3>
+                <p class="what-i-do-skill-div-desc">
+                  Cascading Style Sheets is the language used to style websites
+                </p>
+              </div>
+              <div class="what-i-do-skill-div">
+                <h3 class="what-i-do-skill-div-title">Javascript</h3>
+                <p class="what-i-do-skill-div-desc">
+                  Javascript is the programming language used to provide
+                  functionality to websites
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="portfolio container" id="portfolio">
+          <h2 class="portfolio-title">Portfolio</h2>
+          <div class="portfolio-flex">
+            <div class="portfolio-card">
+              <h3 class="portfolio-card-title">Pacman</h3>
+              <p class="portfolio-card-desc">
+                This is my version of the classic Pacman game and it makes use
+                of HTML, CSS and javascript
+              </p>
+              <img
+                src="images/pacman.png"
+                alt="an image of pacman and the 4 ghosts"
+                class="portfolio-image"
+              />
+              <div class="visit-div">
+                <a
+                  href="https://terryroach-dev.github.io/pacman/"
+                  target="_blank"
+                  class="visit"
+                  >visit</a
+                >
+              </div>
+            </div>
+            <div class="portfolio-card">
+              <h3 class="portfolio-card-title">Image Carousel</h3>
+              <p class="portfolio-card-desc">
+                This image carousel allows a user to navigate through 4 images
+                and it makes use of HTML, CSS and javascript
+              </p>
+              <img
+                src="images/carousel.jpg"
+                alt="an image of a bridge in the disatance from an image carousel"
+                class="portfolio-image"
+              />
+              <div class="visit-div">
+                <a
+                  href="https://terryroach-dev.github.io/carousel/"
+                  target="_blank"
+                  class="visit"
+                  >visit</a
+                >
+              </div>
+            </div>
+            <div class="portfolio-card">
+              <h3 class="portfolio-card-title">Using a Modal</h3>
+              <p class="portfolio-card-desc">
+                This user interactive element makes use of HTML, CSS and
+                javascript
+              </p>
+              <img
+                src="images/modal_big_screen.png"
+                alt="web page modal"
+                class="portfolio-image"
+              />
+              <div class="visit-div">
+                <a
+                  href="https://terryroach-dev.github.io/modal/"
+                  target="_blank"
+                  class="visit"
+                  >visit</a
+                >
+              </div>
+            </div>
+            <div class="portfolio-card">
+              <h3 class="portfolio-card-title">Web Page Searchbar</h3>
+              <p class="portfolio-card-desc">
+                This search function takes user input and makes use of HTML, CSS
+                and javascript
+              </p>
+              <img
+                src="images/searchbar.png"
+                alt="web page searchbar"
+                class="portfolio-image"
+              />
+              <div class="visit-div">
+                <a
+                  href="https://terryroach-dev.github.io/search-bar/"
+                  target="_blank"
+                  class="visit"
+                  >visit</a
+                >
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="blog" id="blog">
+          <div class="container">
+            <h2 class="blog-title">Blog</h2>
+            <div class="blog-div container">
+              <h3 class="blog-div-title">
+                <a href="project-blogs/image-carousel.html" class="blog-link"
+                  >Image Carousel</a
+                >
+              </h3>
+              <p class="blog-div-desc">
+                Wesbite carousels, also know as 'sliders' are popular in website
+                design. They allow multiple slides to be cycled through 1 at a
+                time, either automatically, user controlled or both.
+              </p>
+              <p class="blog-div-date">14/03/2021</p>
+            </div>
+            <div class="blog-div container">
+              <h3 class="blog-div-title">
+                <a href="project-blogs/using-a-modal.html" class="blog-link"
+                  >Using a Modal</a
+                >
+              </h3>
+              <p class="blog-div-desc">
+                A modal is a dialog box/pop up window that is displayed on top
+                of the current page.
+              </p>
+              <p class="blog-div-date">04/03/2021</p>
+            </div>
+            <div class="blog-div container">
+              <h3 class="blog-div-title">
+                <a href="project-blogs/search-bar.html" class="blog-link"
+                  >Search Bar</a
+                >
+              </h3>
+              <p class="blog-div-desc">
+                A search bar allows a user to search for information on a web
+                page.
+              </p>
+              <p class="blog-div-date">04/03/2021</p>
+            </div>
+            <div class="blog-link-div">
+              <a href="blog.html" class="all-blogs-link">All blogs...</a>
+            </div>
+          </div>
+        </section>
+        <section class="contact" id="contact">
+          <div class="form-div container">
+            <h2 class="contact-title">Contact Me</h2>
+            <form method="POST" action="contact.php">
+              <label for="name" class="form-label">Name</label><br />
+              <input
+                type="text"
+                name="name"
+                required
+                class="form-input"
+              /><br />
+              <label for="email" class="form-label">Email Address</label><br />
+              <input
+                type="email"
+                name="email"
+                required
+                class="form-input"
+              /><br />
+              <label for="message" class="form-label">Message</label><br />
+              <textarea
+                name="message"
+                id="message"
+                rows="5"
+                class="form-input"
+              ></textarea
+              ><br />
+              <button type="submit" class="form-submit">Submit</button>
+            </form>
+          </div>
+        </section>
+      </main>
+    </nav>
+    <footer>
+      <div class="social">
+        <ul class="social-list">
+          <li class="social-list-item">
+            <a
+              href="https://twitter.com/frontend_terry"
+              target="_blank"
+              class="social-link"
+              ><i class="fab fa-twitter"></i
+            ></a>
+          </li>
+          <li class="social-list-item">
+            <a
+              href="https://www.linkedin.com/in/terence-roach-a10b90b0"
+              target="_blank"
+              class="social-link"
+              ><i class="fab fa-linkedin"></i
+            ></a>
+          </li>
+          <li class="social-list-item">
+            <a
+              href="https://github.com/terryroach-dev"
+              target="_blank"
+              class="social-link"
+              ><i class="fab fa-github-square"></i
+            ></a>
+          </li>
+        </ul>
+      </div>
+      <p>&copy;2023 Terry Roach</p>
+    </footer>
+    <script src="index.js"></script>
+  </body>
+</html>

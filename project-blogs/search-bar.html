@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Web Developer Blog of a Search Bar implementation. I am learning web development and will update this website as I learn. Take a look at my current portfolio and blogs.">
+    <meta name="keywords" content="portfolio, HTML, CSS, Javascript, blog, developer, web developer">
+    <meta name="author" content="Terry Roach">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terry Roach - Search Bar</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css" integrity="sha256-46qynGAkLSFpVbEBog43gvNhfrOj+BmwXdxFgVK/Kvc=" crossorigin="anonymous" />
+</head>
+<body>
+    <header class="container" id="home">
+        <div class="header-top">
+            <h1 class="header-name"><a href="../index.html" class="home-link">terryroach.co.uk</a></h1>
+        </div>
+        <div class="blog-nav-list">
+            <a href="../blog.html" class="blog-nav-link">All</a>
+            <a href="../html-blogs/html-blogs.html" class="blog-nav-link">HTML</a>
+            <a href="../css-blogs/css-blogs.html" class="blog-nav-link">CSS</a>
+            <a href="../js-blogs/js-blogs.html" class="blog-nav-link">Javascript</a>
+            <a href="project-blogs.html" class="blog-nav-link">Projects</a>
+        </div>
+    </header>
+    <main>
+        <section class="container">
+            <div class="blog-container">
+                <div class="blog-container-header blog-container-header-project">
+                    <p class="blog-container-header-title">Search Bar</p>
+                    <p class="blog-container-header-desc">A search bar is a function which allows the user to find specific information on the web page</p>
+                    <p class="blog-container-header-date">04/03/2021</p>
+                </div>
+                
+                <img src="../images/searchbar.png" alt="a web page search bar" class="blog-container-image">
+
+                <p class="blog-intro">A search bar allows user interation on the web page through an input field. the user enters the information the would like to find on the web page and this is retuned back to them.</p>
+                <p class="blog-intro">In this example I set up a search bar that allows a user to do 2 possible search criteria. The user can search for a team name or a division of teams. The search is carried out using the .includes() method and checks against every character keyed by the user in the input field. To create the search bar required HTML to set the elements structure and add the content required, CSS to add the styling and Javascript to give the search bar it's functionality.</p>
+
+                <p class="blog-para">1. Firstly I set up the index.html file. This was built using an header and main section. The header housed the page title and the instructions for the user to use the 2 search boxes, 1 which searches for team names and the other for a league. The main section contained 2 divs, the first 1 housed the 2 search bars which were both input elements of type text. The second div housed 44 paragraphs all with class of 'team', the data in the paragraphs were an individual team name and a span element with a class of 'league' that detailed the league the team was playing in.</p>
+                <p class="blog-para">2. Next up was to set up the Javascript file. Both of the input elements were stored in variables. These 2 variables each had a 'keyup' event listener attached to them.</p>
+                <p class="blog-para">3. The event listener for the team search initially grabs the data keyed by the user for the team search in a let variable by using the 'event', getting its value and converting it to lower case, event.target.value.toLowerCase(). It then grabs all the teams in a const variable by getting all the elements with a class name of 'team'. A for loop then completes the work of the event listener. The loop iterates over the length of the results with a class name of 'team'. Firstly it converts the current team to lower case in order to match the user input which has been converted to lower case. Next it splits the current team as this is also pulling in the league, it is split at the character '-'. Lastly in the for loop is a conditional to check if the current team includes the user input using the includes() method, if it does then the current team is set to display 'block', if there is no match then the current team is set to display 'none'.</p>
+                <p class="blog-para">4. The event listener for the league search is very similar. The differences are that this uses the 'event' to make a let variable for the league search. It has 2 const variables, the same one to grab all the teams and another one to pull in all the leagues, this uses the same method but looks for a class of 'league'. The for loop again iterates over all the length of the results with a class name of 'team', it converts the current league to lower case, the conditional then checks if the current league includes the user input and does the same action on the display.</p>
+                <p class="blog-para">5. The next step was to set styling up for mobile. This included basic typography and layout elements as well as the input boxes. The div housing the paragraphs of teams was set to display: flex, space-evenly and wrap. The individual paragraphs were given a width of 100%.</p>
+                <p class="blog-para">6. Finally 2 media queries were added, one for a min-width:700px which increases the font size of the title and the instructions. It also reduced the width of the individual paragraphs to 45%. Another query for min-width:1000px further reduces the individual paragraph size to 30%.</p>
+                <p>You can visit the page for the search bar project <a href="https://terryroach-dev.github.io/search-bar/" target="_blank" class="ext-proj-link">here</a></p>
+            </div>
+        </section>
+        
+    </main>
+    <footer>
+        <div class="social">
+            <ul class="social-list">
+                <li class="social-list-item"><a href="https://twitter.com/frontend_terry" target="_blank" class="social-link"><i class="fab fa-twitter"></i></a></li>
+                <li class="social-list-item"><a href="https://www.linkedin.com/in/terence-roach-a10b90b0" target="_blank" class="social-link"><i class="fab fa-linkedin"></i></a></li>
+                <li class="social-list-item"><a href="https://github.com/terryroach-dev" target="_blank" class="social-link"><i class="fab fa-github-square"></i></a></li>
+            </ul>
+        </div>
+        <p>&copy;2021 Terry Roach</p>
+    </footer>
+</body>
+</html>
